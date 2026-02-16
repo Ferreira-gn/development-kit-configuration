@@ -19,5 +19,17 @@
         # fzf (opcional)
         set -gx FZF_DEFAULT_COMMAND 'fd --type f'
     '';
+    
+    
+    functions = {
+      # Finder de algum arquivo ou pasta -> redireciona para o diretório
+      fzf_cd = ''
+        set file (fd --type f 2>/dev/null | fzf)
+        if test -n "$file"
+          cd (dirname "$file")
+          commandline -f repaint
+        end
+      '';
+    }; 
   };
 }

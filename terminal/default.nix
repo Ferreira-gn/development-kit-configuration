@@ -9,5 +9,6 @@
     ./shell/zsh.nix
     ./shell/starship.nix
     ./term/kitty.nix
+    ./term/utils.nix
   ];
 }

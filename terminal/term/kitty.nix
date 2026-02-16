@@ -1,71 +1,80 @@
 { config, pkgs, ... }:
 
 {
-  programs.kitty = {
-    enable = true;
+  home.file.".config/kitty/kitty.conf".text = ''
+    ########################
+    # Aparência
+    ########################
+    background #15141C
+    foreground #E0DEF4
+    background_opacity 0.90
 
-    shellIntegration.enableFishIntegration = true;
+    ########################
+    # Fonte
+    ########################
+    font_family JetBrainsMono Nerd Font
+    font_size 11.0
 
-    settings = {
-      shell = "fish";
+    ########################
+    # Cursor
+    ########################
+    cursor_shape beam
+    cursor_beam_thickness 1.5
+    cursor_blink_interval 0.5
+    cursor_trail 1
 
-      ## Aparência geral
-      background = "#15141C";
-      background_opacity = "0.85";
-      foreground = "#E0DEF4";
+    ########################
+    # Espaçamento
+    ########################
+    window_padding_width 12
+    window_margin_width 10.75
 
-      ## Cursor
-      cursor_shape = "beam";
-      cursor_beam_thickness = "1.5";
-      cursor_blink_interval = "0.5";
+    ########################
+    # Scroll
+    ########################
+    scrollback_lines 10000
+    wheel_scroll_multiplier 3.0
 
-      ## Bordas e padding
-      window_padding_width = "12";
-      confirm_os_window_close = 0;
+    ########################
+    # Seleção
+    ########################
+    selection_background #403D52
+    selection_foreground #FFFFFF
 
-      ## Barra de título
-      hide_window_decorations = "no";
+    ########################
+    # Comportamento
+    ########################
+    confirm_os_window_close 0
+    shell fish
 
-      ## Scroll
-      scrollback_lines = 10000;
-      wheel_scroll_multiplier = "5.0";
+    ########################
+    # Atalhos - Copy
+    ########################
+    map ctrl+c copy_or_interrupt
 
-      ## Seleção
-      selection_background = "#403D52";
-      selection_foreground = "#FFFFFF";
+    ########################
+    # Atalhos - Search
+    ########################
+    map ctrl+shift+f send_text all "fzf_cd"
+    map ctrl+shift+h launch --location=hsplit fish -c "fzf-history"
+    map ctrl+shift+o launch --location=hsplit fish -c "fzf-open"
 
-      ## Performance
-      repaint_delay = 10;
-      input_delay = 3;
+    ########################
+    # Atalhos - Scroll
+    ########################
+    map page_up scroll_page_up
+    map page_down scroll_page_down
 
-      ## Cursor trail (desative se não gostar)
-      cursor_trail = 1;
-      cursor_trail_decay = "0.1 0.4";
-      cursor_trail_start_threshold = 0;
-
-      ## Cores básicas (inspirado em Rose Pine / Nord híbrido)
-      color0  = "#1F1D2E";
-      color1  = "#EB6F92";
-      color2  = "#9CCFD8";
-      color3  = "#F6C177";
-      color4  = "#31748F";
-      color5  = "#C4A7E7";
-      color6  = "#9CCFD8";
-      color7  = "#E0DEF4";
-
-      color8  = "#6E6A86";
-      color9  = "#EB6F92";
-      color10 = "#9CCFD8";
-      color11 = "#F6C177";
-      color12 = "#31748F";
-      color13 = "#C4A7E7";
-      color14 = "#9CCFD8";
-      color15 = "#FFFFFF";
-    };
-
-    font = {
-      name = "JetBrainsMono Nerd Font";
-      size = 12;
-    };
-  };
+    ########################
+    # Atalhos - Zoom
+    ########################
+    map ctrl+plus change_font_size all +1
+    map ctrl+equal change_font_size all +1
+    map ctrl+kp_add change_font_size all +1
+    map ctrl+minus change_font_size all -1
+    map ctrl+underscore change_font_size all -1
+    map ctrl+kp_subtract change_font_size all -1
+    map ctrl+0 change_font_size all 0
+    map ctrl+kp_0 change_font_size all 0
+  '';
 }

@@ -6,6 +6,7 @@
     eza
     zoxide
     fzf
+    fd
     btop
   ];
 }

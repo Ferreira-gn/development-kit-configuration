@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.username = "ferreira-gn";
@@ -20,6 +20,9 @@
     qt6.qtimageformats
     qt6.qtshadertools
     kdePackages.layer-shell-qt
+    
+    nil # lsp of nix
+    nixd # Another lsp of nix
   ];
 
   # Cursor
