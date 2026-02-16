@@ -23,6 +23,8 @@
     
     nil # lsp of nix
     nixd # Another lsp of nix
+    nerd-fonts.zed-mono
+    nerd-fonts.jetbrains-mono
   ];
 
   # Cursor
@@ -33,8 +35,12 @@
     gtk.enable = true;
     x11.enable = true;
   };
+  
+  # fonts
+  fonts.fontconfig.enable = true;
+    
 
-  # Módulos do Hyprland
+  # Módulos
   imports = [
     ./hypr/default.nix
     ./terminal/default.nix

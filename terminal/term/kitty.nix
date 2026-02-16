@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   home.file.".config/kitty/kitty.conf".text = ''
@@ -7,12 +7,15 @@
     ########################
     background #15141C
     foreground #E0DEF4
-    background_opacity 0.90
+    background_opacity 1
 
     ########################
     # Fonte
     ########################
     font_family JetBrainsMono Nerd Font
+    bold_font        auto
+    italic_font      auto
+    bold_italic_font auto
     font_size 11.0
 
     ########################
