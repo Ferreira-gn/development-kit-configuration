@@ -25,6 +25,13 @@
     nixd # Another lsp of nix
     nerd-fonts.zed-mono
     nerd-fonts.jetbrains-mono
+    
+    wev # adicionar now configuration depois 
+    
+    # desenvolviemnto mobile
+    scrcpy
+    android-tools
+    eas-cli
   ];
 
   # Cursor
