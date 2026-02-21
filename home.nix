@@ -5,6 +5,8 @@
   home.homeDirectory = "/home/ferreira-gn";
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
+  fonts.fontconfig.enable = true;
+  
 
   # Pacotes básicos
   home.packages = with pkgs; [
@@ -20,11 +22,6 @@
     qt6.qtimageformats
     qt6.qtshadertools
     kdePackages.layer-shell-qt
-    
-    nil # lsp of nix
-    nixd # Another lsp of nix
-    nerd-fonts.zed-mono
-    nerd-fonts.jetbrains-mono
     
     wev # adicionar now configuration depois 
     
@@ -42,10 +39,7 @@
     gtk.enable = true;
     x11.enable = true;
   };
-  
-  # fonts
-  fonts.fontconfig.enable = true;
-    
+
 
   # Módulos
   imports = [

@@ -4,7 +4,7 @@
   programs.home-manager.enable = true;
   
   imports = [
-    ./cli/packages.nix
+    ./packages/packages.nix
     ./shell/fish.nix
     ./shell/zsh.nix
     ./shell/starship.nix

@@ -4,6 +4,22 @@
 {
   programs.home-manager.enable = true;
   
+  home.packages = with pkgs; [
+    # Pacotes necessários para rodar o hyprland 
+    hyprland
+    waybar
+    wofi
+    rofi
+    hyprpaper
+    hypridle
+    hyprlock
+    playerctl
+    polkit
+    quickshell
+  ];
+  
+  
+  
   # Configura arquivos do Hyprland em ~/.config/hypr/
   xdg.configFile."hypr/hyprland.conf".source = ./hyprland.conf;
   xdg.configFile."hypr/general.conf".source = ./general.conf;
