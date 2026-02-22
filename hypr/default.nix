@@ -40,6 +40,8 @@
   # Configura os executaveis ao rodar o hypr 
   xdg.configFile."hypr/hyprpaper.conf".source = ./hyprpaper.conf;
   
+  xdg.configFile."hypr/scripts/start-shell.sh".source = ./scripts/start-shell.sh;
+  
   #xdg.configFile."hypr/animations.conf".source = ./animations.conf;
   #xdg.configFile."hypr/gestures.conf".source = ./gestures.conf;
 }
