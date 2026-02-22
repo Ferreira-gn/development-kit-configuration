@@ -10,6 +10,8 @@
       la = "eza -la --icons";
       tree = "eza --tree";
       top = "btop";
+      qs-restart = "pkill quickshell && quickshell run";
+      qs-kill =  "pkill quickshell";
     };
 
     interactiveShellInit = ''
