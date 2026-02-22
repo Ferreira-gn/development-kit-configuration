@@ -23,7 +23,11 @@
     qt6.qtshadertools
     kdePackages.layer-shell-qt
     
-    wev # adicionar now configuration depois 
+    # ferramentas de chacagem do sistema
+    wev
+    evtest
+    brightnessctl
+    
     
     # desenvolviemnto mobile
     scrcpy
