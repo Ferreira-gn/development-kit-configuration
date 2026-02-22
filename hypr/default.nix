@@ -16,6 +16,10 @@
     playerctl
     polkit
     quickshell
+    
+    # Ferramentas de captura de tela 
+    hyprshot
+    satty
   ];
   
   
