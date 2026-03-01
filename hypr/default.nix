@@ -10,7 +10,6 @@
     waybar
     wofi
     rofi
-    hyprpaper
     hypridle
     hyprlock
     playerctl
@@ -20,6 +19,10 @@
     # Ferramentas de captura de tela 
     hyprshot
     satty
+    
+    # Ferramenta de gerenciamento de wallpaper
+    swww
+    hyprpaper
   ];
   
   
