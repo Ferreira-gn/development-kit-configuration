@@ -12,17 +12,6 @@
   home.packages = with pkgs; [
     bibata-cursors
 
-    # pacotes necessários para rodar em conjunto com o hypr
-    jq
-    qt6.qtbase
-    qt6.qtdeclarative
-    qt6.qtwayland
-    qt6.qtsvg
-    qt6.qtmultimedia
-    qt6.qtimageformats
-    qt6.qtshadertools
-    kdePackages.layer-shell-qt
-    
     # ferramentas de chacagem do sistema
     wev
     evtest
@@ -49,6 +38,7 @@
   imports = [
     ./hypr/default.nix
     ./terminal/default.nix
+    ./quickshell/default.nix
   ];
   
   wayland.windowManager.hyprland.settings.exec-once = [
