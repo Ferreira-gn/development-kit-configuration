@@ -2,7 +2,7 @@
 
 DIR="$HOME/Images/Wallpapers"
 STATE_FILE="$HOME/.cache/swww-last-wallpaper"
-DEFAULT_WALL="$HOME/Images/Wallpapers/default.jpg"
+DEFAULT_WALL="$HOME/.config/hypr/assets/default-02.jpg"
 
 # Verifica se diretório existe
 if [ ! -d "$DIR" ]; then

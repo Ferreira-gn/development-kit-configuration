@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 STATE_FILE="$HOME/.cache/swww-last-wallpaper"
-DEFAULT_WALL="$HOME/Images/Wallpapers/default.jpg"
+DEFAULT_WALL="$HOME/.config/hypr/assets/default-02.jpg"
 
 apply_wall() {
     swww img "$1" --transition-type fade --transition-duration 1
