@@ -6,7 +6,6 @@
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
   fonts.fontconfig.enable = true;
-  
 
   # Pacotes básicos
   home.packages = with pkgs; [
@@ -16,12 +15,13 @@
     wev
     evtest
     brightnessctl
-    
-    
+
     # desenvolviemnto mobile
     scrcpy
     android-tools
     eas-cli
+
+    biome
   ];
 
   # Cursor
@@ -33,14 +33,14 @@
     x11.enable = true;
   };
 
-
   # Módulos
   imports = [
     ./hypr/default.nix
     ./terminal/default.nix
     ./quickshell/default.nix
+    ./wlogout/default.nix
   ];
-  
+
   wayland.windowManager.hyprland.settings.exec-once = [
     "quickshell -p /home/ferreira-gn/Downloads/myFlake/quickshell-topbar"
   ];
