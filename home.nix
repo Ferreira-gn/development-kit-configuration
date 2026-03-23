@@ -39,9 +39,6 @@
     ./terminal/default.nix
     ./quickshell/default.nix
     ./wlogout/default.nix
-  ];
-
-  wayland.windowManager.hyprland.settings.exec-once = [
-    "quickshell -p /home/ferreira-gn/Downloads/myFlake/quickshell-topbar"
+    ./rofi/default.nix
   ];
 }
