@@ -1,0 +1,9 @@
+{ ... }:
+
+{
+  programs.home-manager.enable = true;
+
+  imports = [
+    ./java/configs.nix
+  ];
+}

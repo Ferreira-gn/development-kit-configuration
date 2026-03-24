@@ -40,5 +40,6 @@
     ./quickshell/default.nix
     ./wlogout/default.nix
     ./rofi/default.nix
+    ./dev/default.nix
   ];
 }
