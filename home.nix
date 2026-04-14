@@ -22,6 +22,8 @@
     eas-cli
 
     biome
+    lsof
+    unzip
   ];
 
   # Cursor
