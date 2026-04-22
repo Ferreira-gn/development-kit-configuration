@@ -1,0 +1,233 @@
+{
+  "files.autoSave": "afterDelay",
+  "prolead.runTime.timesActivated": 1874,
+  "prolead.templates.configFile": "c:\\Users\\geano\\.vscode\\extensions\\chairimpsec.prolead-1.2.8/templates/config.set",
+  "prolead.templates.designFile": "c:\\Users\\geano\\.vscode\\extensions\\chairimpsec.prolead-1.2.8/templates/design.v",
+  "prolead.templates.libraryFile": "c:\\Users\\geano\\.vscode\\extensions\\chairimpsec.prolead-1.2.8/templates/library.lib",
+  "prolead.templates.linkerFile": "c:\\Users\\geano\\.vscode\\extensions\\chairimpsec.prolead-1.2.8/templates/linker.ld",
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "prolead.runTime.welcomePage": false,
+  "explorer.compactFolders": false,
+  "explorer.sortOrder": "filesFirst",
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "zig": "zig run",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runghc",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "sml": "cd $dir && sml $fileName",
+    "mojo": "mojo run",
+    "erlang": "escript",
+    "spwn": "spwn build",
+    "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
+    "gleam": "gleam run -m $fileNameWithoutExt"
+  },
+  "workbench.colorCustomizations": {},
+  "explorer.confirmDragAndDrop": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "explorer.confirmDelete": false,
+  "workbench.iconTheme": "symbols",
+  "editor.stickyScroll.enabled": false,
+  "[prisma]": {
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.ignoreRebaseWarning": true,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+
+  "workbench.tree.indent": 17,
+  "terminal.integrated.env.windows": {},
+
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": {
+    "*.svg": "default",
+    "*.bin": "default"
+  },
+
+  "workbench.startupEditor": "newUntitledFile",
+  "window.titleBarStyle": "custom",
+  "breadcrumbs.enabled": false,
+
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "jetBrains Mono",
+  "editor.lineHeight": 1.8,
+  "editor.fontLigatures": true,
+  "editor.renderLineHighlight": "all",
+  "editor.semanticHighlighting.enabled": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "JetBrainsMono NFM",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "/usr/bin/zsh",
+      "args": []
+    },
+    "sh": {
+      "path": "/bin/sh"
+    }
+  },
+
+  "[markdown]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+
+  "window.customTitleBarVisibility": "windowed",
+  "workbench.panel.showLabels": false,
+  "terminal.external.linuxExec": "kitty",
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "editor.inlineSuggest.showToolbar": "always",
+  "terminal.integrated.env.linux": {},
+  "workbench.navigationControl.enabled": false,
+  "workbench.activityBar.location": "top",
+  "C_Cpp.copilotHover": "enabled",
+  "chat.agent.enabled": false,
+  "telemetry.feedback.enabled": false,
+  "chat.notifyWindowOnConfirmation": false,
+
+  "workbench.colorTheme": "Tokyo Night",
+
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+
+  // configurações GO
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    }
+  },
+
+  // Linting
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "package",
+  "go.lintFlags": ["--fast"],
+
+  // Go Modules
+  "go.useLanguageServer": true,
+  "gopls": {
+    "staticcheck": true,
+    "analyses": {
+      "unusedparams": true,
+      "shadow": true
+    }
+  },
+
+  // Debugging
+  "go.testFlags": ["-v"],
+  "go.testTimeout": "30s",
+  "go.formatTool": "goimports",
+  "go.autocompleteUnimportedPackages": true,
+  "go.vetOnSave": "package",
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "git.suggestSmartCommit": false,
+  "window.zoomLevel": 0.4,
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.layoutControl.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "chat.agent.thinking.collapsedTools": "none"
+}
