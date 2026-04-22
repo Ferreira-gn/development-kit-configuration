@@ -15,15 +15,18 @@
     wev
     evtest
     brightnessctl
+    lsof
+    unzip
 
     # desenvolviemnto mobile
     scrcpy
     android-tools
     eas-cli
 
+    # ferramenta de criação de diagramas
+    drawio
+    
     biome
-    lsof
-    unzip
   ];
 
   # Cursor
