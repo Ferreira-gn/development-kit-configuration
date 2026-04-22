@@ -17,6 +17,7 @@
     brightnessctl
     lsof
     unzip
+    wl-clipboard
 
     # desenvolviemnto mobile
     scrcpy
