@@ -28,6 +28,7 @@
     drawio
     
     biome
+    air
   ];
 
   # Cursor
