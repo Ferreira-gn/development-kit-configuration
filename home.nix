@@ -29,6 +29,11 @@
     
     biome
     air
+    
+    # Pacotes de requisições GRPC do Golang
+    protobuf
+    protoc-gen-go
+    protoc-gen-go-grpc
   ];
 
   # Cursor
