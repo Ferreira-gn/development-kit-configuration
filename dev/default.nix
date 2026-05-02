@@ -5,5 +5,6 @@
 
   imports = [
     ./java/configs.nix
+    ./nvim/configs.nix
   ];
 }

@@ -12,7 +12,7 @@
       top = "btop";
     };
 
-    initExtra = ''
+    initContent = ''
       # zoxide
       eval "$(zoxide init zsh)"
 
