@@ -6,5 +6,6 @@
   imports = [
     ./java/configs.nix
     ./nvim/configs.nix
+    ./tools/configs.nix
   ];
 }
