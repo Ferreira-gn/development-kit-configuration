@@ -265,7 +265,7 @@
     vscode
     zed-editor
     android-studio
-    jetbrains.idea-community   
+    jetbrains.idea-oss 
     insomnia
     kitty
     alacritty

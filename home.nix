@@ -3,7 +3,7 @@
 {
   home.username = "ferreira-gn";
   home.homeDirectory = "/home/ferreira-gn";
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.11";
   programs.home-manager.enable = true;
   fonts.fontconfig.enable = true;
 
