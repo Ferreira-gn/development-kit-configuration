@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR="$HOME/Images/Wallpapers"
+DIR="$HOME/imagens/wallpaper"
 STATE_FILE="$HOME/.cache/swww-last-wallpaper"
 DEFAULT_WALL="$HOME/.config/hypr/assets/default-02.jpg"
 
