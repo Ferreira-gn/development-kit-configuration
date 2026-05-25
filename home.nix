@@ -17,6 +17,7 @@
     brightnessctl
     lsof
     unzip
+    unrar
     wl-clipboard
 
     # desenvolviemnto mobile
@@ -26,10 +27,10 @@
 
     # ferramenta de criação de diagramas
     drawio
-    
+
     biome
     air
-    
+
     # Pacotes de requisições GRPC do Golang
     protobuf
     protoc-gen-go
