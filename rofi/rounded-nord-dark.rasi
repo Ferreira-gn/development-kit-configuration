@@ -9,8 +9,4 @@
     fg3:    #4C566A;
 }
 
-@import "config.rasi"
 
-element selected {
-    text-color: @bg1;
-}

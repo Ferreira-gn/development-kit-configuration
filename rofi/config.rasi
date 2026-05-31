@@ -1,8 +1,10 @@
+@import "rounded-nord-dark.rasi"
+
 
 * {
     font:   "Roboto 12";
 
-    background-color:   transparent;
+    background-color:   @bg1;
     text-color:         @fg0;
 
     margin:     0px;
@@ -81,6 +83,10 @@ element alternate active {
 
 element selected normal, element selected active {
     background-color:   @bg3;
+}
+
+element selected {
+    text-color: @bg1;
 }
 
 element-icon {
