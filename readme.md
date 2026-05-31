@@ -11,7 +11,10 @@ Essas são **as minhas configuração** do meu setup de desenvolvimento criadas 
 [] - Implementar menu de gestão de áudio 
 [] - Implementar menu de gestão dos wallpapers ( visual ) 
 [] - Implementar menu de gestão de compartilhamento de tela
-[] - Re-estruturar cada modulo de configuração
+[] - Re-estruturar cada modulo de configuração para ser reproduzivel em qualquer setup
+
+#### Observações : 
+.......
 
 
 <br/>
