@@ -34,8 +34,11 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
   ################################################################################
   # Gráficos / GPU (Intel Tiger Lake)
   ################################################################################
@@ -43,8 +46,8 @@
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
-      intel-media-driver    # VAAPI iHD
-      intel-vaapi-driver    # fallback i965
+      intel-media-driver # VAAPI iHD
+      intel-vaapi-driver # fallback i965
       libvdpau-va-gl
     ];
   };
@@ -74,14 +77,13 @@
   # Hyprland — ambiente de desenvolvimento
   programs.hyprland.enable = true;
 
- 
   # COSMIC - ambiente de testes
   services.desktopManager.cosmic.enable = true;
   services.system76-scheduler.enable = true;
   environment.sessionVariables.COSMIC_DATA_CONTROL_ENABLED = 1;
 
   ################################################################################
-  # Portals 
+  # Portals
   ################################################################################
 
   xdg.portal = {
@@ -118,7 +120,6 @@
     wireplumber.enable = true;
   };
 
-
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
@@ -140,8 +141,6 @@
     };
   };
 
-
-
   ################################################################################
   # Impressão / Flatpak
   ################################################################################
@@ -157,7 +156,11 @@
     isNormalUser = true;
     description = "ferreira-gn";
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" "networkmanager" "docker" ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "docker"
+    ];
   };
 
   programs.zsh.enable = true;
@@ -206,7 +209,6 @@
     blueman
     pulseaudio
 
-
     # GNOME (fallback)
     gnome-tweaks
     gnomeExtensions.appindicator
@@ -241,7 +243,6 @@
       ];
     })
 
-
     # Games
     steam
     heroic
@@ -256,16 +257,15 @@
     poetry
 
     javaPackages.compiler.openjdk21
-    kotlin                     
-    gradle                     
-    maven                      
-
+    kotlin
+    gradle
+    maven
 
     # Dev tools
     vscode
     zed-editor
     android-studio
-    jetbrains.idea-oss 
+    jetbrains.idea-oss
     insomnia
     kitty
     alacritty
@@ -283,12 +283,16 @@
 
   ];
 
-  # LSP 
+  # LSP
   programs.nix-ld.enable = true;
 
   ################################################################################
   # Estado do Sistema
   ################################################################################
 
-  system.stateVersion = "25.11";
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = false;
+  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-26.05";
+
+  system.stateVersion = "26.05";
 }
