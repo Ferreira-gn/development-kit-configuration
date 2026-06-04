@@ -11,5 +11,5 @@ in
     defaultEditor = true;
   };
 
-  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink nvimConfig;
+  xdg.configFile."nvim".source = ./conf;
 }
