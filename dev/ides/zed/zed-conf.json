@@ -1,5 +1,8 @@
 {
   // Global settings
+  "collaboration_panel": {
+    "button": false
+  },
   "vim_mode": false,
   "format_on_save": "on",
   "autosave": {
@@ -12,8 +15,7 @@
 
   "inline_code_actions": false,
   "disable_ai": true,
-  
-  
+
   "agent": {
     "enabled": true,
     "button": true,
@@ -32,6 +34,11 @@
 
   "toolbar": {
     "quick_actions": false,
+  },
+
+  "git_panel": {
+    "dock": "left",
+    "default_width": 450,
   },
 
   "project_panel": {
@@ -86,7 +93,7 @@
     "Kanagawa": {
       "border": "#1e1f29",
       "border.variant": "#1e1f29",
-      // "title_bar.background": "#1e1f29",
+      "title_bar.background": "#1e1f29",
       "syntax": {
         "comment": {
           "font_style": "italic",
@@ -122,16 +129,7 @@
   },
 
   "lsp": {
-    "javascript": {
-      "settings": {
-        "codeActionOnSave": {
-          "source.fixAll.eslint": true,
-          "source.organizeImports": true,
-        },
-      },
-    },
-
-    "typescript": {
+    "typescript-language-server": {
       "settings": {
         "codeActionOnSave": {
           "source.fixAll.eslint": true,
