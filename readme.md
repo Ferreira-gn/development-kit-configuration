@@ -18,7 +18,12 @@ Essas são **as minhas configuração** do meu setup de desenvolvimento criadas 
 
 
 <br/>
+
 # Como rodar : 
+
 ```
   home-manager switch --flake .#seu-usuário-nixos
+  ou
+  nix run github:nix-community/home-manager -- switch --flake .#seu-usuário-nixos  
+
 ```
