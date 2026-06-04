@@ -18,7 +18,7 @@
     satty
 
     # Ferramentas de gerenciamento de wallpaper
-    swww
+    awww
     hyprpaper
 
     # Ferramentas de lock screen

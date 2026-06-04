@@ -26,7 +26,7 @@ if [ -z "$IMG" ]; then
 fi
 
 # Aplica wallpaper
-swww img "$IMG" \
+awww img "$IMG" \
   --transition-type random \
   --transition-angle 90 \
   --transition-duration 2 \

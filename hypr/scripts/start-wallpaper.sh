@@ -4,7 +4,7 @@ STATE_FILE="$HOME/.cache/swww-last-wallpaper"
 DEFAULT_WALL="$HOME/.config/hypr/assets/default-02.jpg"
 
 apply_wall() {
-    swww img "$1" --transition-type fade --transition-duration 1
+    awww img "$1" --transition-type fade --transition-duration 1
 }
 
 # Caso 1: arquivo existe e não está vazio
