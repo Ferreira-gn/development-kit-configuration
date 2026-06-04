@@ -29,8 +29,8 @@
     ########################
     # Espaçamento
     ########################
-    window_padding_width 12
-    window_margin_width 10.75
+    window_padding_width 8
+    #window_margin_width 10.75
 
     ########################
     # Scroll

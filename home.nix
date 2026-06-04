@@ -10,7 +10,7 @@
   # Basic packages
   home.packages = with pkgs; [
     bibata-cursors
-    
+
   ];
 
   # Cursor
@@ -22,9 +22,11 @@
     x11.enable = true;
   };
 
+  home.file.".local/share/hypr/stubs".source = "${pkgs.hyprland}/share/hypr/stubs";
+
   # Módulos
   imports = [
-    ./hypr/default.nix
+    #./hypr/default.nix
     ./terminal/default.nix
     ./quickshell/default.nix
     ./wlogout/default.nix
