@@ -7,34 +7,10 @@
   programs.home-manager.enable = true;
   fonts.fontconfig.enable = true;
 
-  # Pacotes básicos
+  # Basic packages
   home.packages = with pkgs; [
     bibata-cursors
-
-    # ferramentas de chacagem do sistema
-    wev
-    evtest
-    brightnessctl
-    lsof
-    unzip
-    unrar
-    wl-clipboard
-
-    # desenvolviemnto mobile
-    scrcpy
-    android-tools
-    eas-cli
-
-    # ferramenta de criação de diagramas
-    drawio
-
-    biome
-    air
-
-    # Pacotes de requisições GRPC do Golang
-    protobuf
-    protoc-gen-go
-    protoc-gen-go-grpc
+    
   ];
 
   # Cursor

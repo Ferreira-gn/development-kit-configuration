@@ -5,11 +5,23 @@
 
   home.packages = with pkgs; [
 
+    # tools to management system
+    wev
+    evtest
+    brightnessctl
+    lsof
+    unzip
+    unrar
+    wl-clipboard
+
     # Core CLI tools
     git
     curl
     wget
     unzip
+
+    # tool for creation for diagrams
+    drawio
 
     # Build essentials
     gcc
@@ -28,6 +40,7 @@
     typescript
     typescript-language-server
     prettier
+    biome
 
     # Lua / Neovim
     lua
