@@ -16,6 +16,7 @@
 
     # Core CLI tools
     git
+    gh # github cli
     curl
     wget
     unzip
