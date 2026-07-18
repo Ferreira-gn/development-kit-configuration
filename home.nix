@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   home.username = "ferreira-gn";
@@ -10,7 +10,8 @@
   # Basic packages
   home.packages = with pkgs; [
     bibata-cursors
-
+    krita
+    firefox
   ];
 
   # Cursor
@@ -22,11 +23,15 @@
     x11.enable = true;
   };
 
+  # modulo para facilitar o lsp do hypr-lua
   home.file.".local/share/hypr/stubs".source = "${pkgs.hyprland}/share/hypr/stubs";
+
 
   # Módulos
   imports = [
+    inputs.noctalia.homeModules.default
     ./hypr/default.nix
+    #./hypr-lua/default.nix
     ./terminal/default.nix
     ./quickshell/default.nix
     ./wlogout/default.nix
