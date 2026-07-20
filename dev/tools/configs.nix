@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
 
     # tools to management system
+    codex # codex cli
     wev
     evtest
     brightnessctl
