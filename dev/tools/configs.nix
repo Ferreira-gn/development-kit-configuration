@@ -5,11 +5,25 @@
 
   home.packages = with pkgs; [
 
+    # tools to management system
+    codex # codex cli
+    wev
+    evtest
+    brightnessctl
+    lsof
+    unzip
+    unrar
+    wl-clipboard
+
     # Core CLI tools
     git
+    gh # github cli
     curl
     wget
     unzip
+
+    # tool for creation for diagrams
+    drawio
 
     # Build essentials
     gcc
@@ -26,8 +40,9 @@
     # Node.js / TypeScript
     nodejs
     typescript
-    nodePackages.typescript-language-server
-    nodePackages.prettier
+    typescript-language-server
+    prettier
+    biome
 
     # Lua / Neovim
     lua

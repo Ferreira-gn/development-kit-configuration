@@ -26,6 +26,8 @@
     hypridle
   ];
 
-  # Salva os arquivos do modulo hypr em ~/.config/hypr/
-  xdg.configFile."hypr".source = ../hypr;
-}
+  xdg.configFile."hypr".source = ../hypr-lua;
+}  
+
+
+

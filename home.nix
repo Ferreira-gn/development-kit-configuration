@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   home.username = "ferreira-gn";
@@ -7,34 +7,11 @@
   programs.home-manager.enable = true;
   fonts.fontconfig.enable = true;
 
-  # Pacotes básicos
+  # Basic packages
   home.packages = with pkgs; [
     bibata-cursors
-
-    # ferramentas de chacagem do sistema
-    wev
-    evtest
-    brightnessctl
-    lsof
-    unzip
-    unrar
-    wl-clipboard
-
-    # desenvolviemnto mobile
-    scrcpy
-    android-tools
-    eas-cli
-
-    # ferramenta de criação de diagramas
-    drawio
-
-    biome
-    air
-
-    # Pacotes de requisições GRPC do Golang
-    protobuf
-    protoc-gen-go
-    protoc-gen-go-grpc
+    krita
+    firefox
   ];
 
   # Cursor
@@ -46,9 +23,14 @@
     x11.enable = true;
   };
 
+  # modulo para facilitar o lsp do hypr-lua
+  home.file.".local/share/hypr/stubs".source = "${pkgs.hyprland}/share/hypr/stubs";
+
+
   # Módulos
   imports = [
-    ./hypr/default.nix
+    inputs.noctalia.homeModules.default
+    ./hypr-lua/default.nix
     ./terminal/default.nix
     ./quickshell/default.nix
     ./wlogout/default.nix

@@ -100,7 +100,7 @@
 
   services.libinput.enable = true;
   services.libinput.touchpad.naturalScrolling = true;
-
+  services.upower.enable = true;
   services.power-profiles-daemon.enable = true;
 
   ################################################################################
@@ -290,9 +290,13 @@
   # Estado do Sistema
   ################################################################################
 
-  system.autoUpgrade.enable = true;
-  system.autoUpgrade.allowReboot = false;
-  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-26.05";
+  documentation = {
+    enable = true;
+
+    man.enable = false;
+    doc.enable = false;
+    info.enable = false;
+  };
 
   system.stateVersion = "26.05";
 }
