@@ -30,8 +30,7 @@
   # Módulos
   imports = [
     inputs.noctalia.homeModules.default
-    ./hypr/default.nix
-    #./hypr-lua/default.nix
+    ./hypr-lua/default.nix
     ./terminal/default.nix
     ./quickshell/default.nix
     ./wlogout/default.nix
