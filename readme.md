@@ -2,6 +2,10 @@
 
 Este repositório reúne as configurações que utilizo diariamente no meu ambiente de desenvolvimento. Sinta-se à vontade para explorar os arquivos, estudar a organização adotada e adaptar o conteúdo às necessidades do seu próprio setup. Entretanto, algumas configurações dependem de uma ordem específica de execução e exigem atenção durante os processos de build, ativação e atualização. Caso você ainda não tenha muita experiência com NixOS, Flakes ou Home Manager, recomendo a leitura das próximas seções antes de aplicar qualquer alteração ao sistema.
 
+
+<img width="100%" href="./docs/assets/img-01.jpg" />
+
+
 A organização deste projeto segue um modelo modular bastante utilizado pela comunidade NixOS. O Flake é responsável por declarar e versionar as entradas do projeto, como o Nixpkgs, o Home Manager e outras dependências externas. A configuração do NixOS gerencia exclusivamente o sistema, incluindo bootloader, hardware, serviços, usuários e recursos globais. Já o Home Manager gerencia a sessão do usuário, seus pacotes, programas, dotfiles e preferências pessoais. Embora ambos utilizem os mesmos inputs definidos pelo Flake, suas configurações e processos de ativação são independentes. Essa separação permite reconstruir o sistema e atualizar o ambiente do usuário individualmente. A seguir, confira a estrutura adotada pelo repositório.
 
 
