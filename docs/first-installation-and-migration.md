@@ -6,6 +6,10 @@ Os nomes `host` e `username` são usados ao longo do guia como valores genérico
 
 > Este documento parte do princípio de que o leitor já possui uma instalação funcional do NixOS ou iniciou a máquina pela imagem oficial de instalação. O particionamento e a formatação dos discos devem ser realizados de acordo com o hardware e com o layout desejado, pois esses procedimentos não podem ser reproduzidos com segurança por uma configuração genérica.
 
+<br/>
+<br/>
+
+
 ## Como esta configuração funciona
 
 Este repositório descreve dois ambientes relacionados, mas independentes. O primeiro é o sistema NixOS, responsável pelo bootloader, kernel, hardware, sistemas de arquivos, usuários, rede, serviços globais e demais recursos necessários para iniciar e operar a máquina. O segundo é o ambiente do Home Manager, responsável pelos pacotes, programas, serviços e arquivos de configuração pertencentes à sessão do usuário.
@@ -46,6 +50,11 @@ A estrutura esperada para uma única máquina é semelhante a esta:
         └── home.nix
 ```
 
+
+<br/>
+<br/>
+
+
 ### Hardware configuration
 
 O arquivo `hardware-configuration.nix` não deve ser copiado de outra máquina. Ele contém informações detectadas localmente, como UUIDs dos sistemas de arquivos, módulos necessários no initrd, dispositivos de swap e características do armazenamento. Mesmo computadores do mesmo modelo podem possuir discos, partições ou UUIDs diferentes.
@@ -64,6 +73,9 @@ As opções `system.stateVersion` e `home.stateVersion` não controlam as versõ
 
 Em uma migração, mantenha os valores já utilizados pela instalação anterior. Em uma instalação nova, use a versão estável com a qual o sistema está sendo iniciado. Não altere esses valores apenas porque o `nixpkgs` ou o Home Manager foram atualizados.
 
+<br/>
+
+
 ### Ordem de ativação
 
 A primeira instalação deve respeitar a seguinte ordem lógica:
@@ -75,6 +87,9 @@ A primeira instalação deve respeitar a seguinte ordem lógica:
 5. ativar o Home Manager como o próprio usuário.
 
 O Home Manager não deve ser usado para compensar uma configuração de sistema incompleta. Shells, terminais, compositores, agentes de sessão e serviços pessoais só devem ser ativados depois que a base do NixOS estiver funcionando.
+
+<br/>
+
 
 ## Antes de começar
 
@@ -107,6 +122,11 @@ home-manager = {
 
 Revise também os módulos importados pelo projeto. Configurações de GPU, Bluetooth, impressão, virtualização, sistemas de arquivos, dispositivos específicos e serviços opcionais podem não ser adequadas para todas as máquinas. Antes do primeiro build, desative módulos que dependam de hardware inexistente ou adapte suas opções ao computador de destino.
 
+<br/>
+<br/>
+<br/>
+
+
 ## 1. Adaptar a estrutura do repositório
 
 Localize o diretório de host que acompanha o repositório e renomeie-o para o hostname escolhido. Faça o mesmo com o diretório do perfil pessoal, usando o username que será criado no sistema.
@@ -132,6 +152,9 @@ cp -r home/template home/username
 ```
 
 Use apenas uma dessas abordagens. O objetivo é terminar esta etapa com um diretório próprio para a máquina e outro para o usuário.
+
+<br/>
+<br/>
 
 ## 2. Registrar o host e o usuário no Flake
 
@@ -191,6 +214,10 @@ uname -m
 
 Um resultado `x86_64` corresponde normalmente a `x86_64-linux`. Máquinas ARM de 64 bits normalmente utilizam `aarch64-linux`, desde que todos os módulos e pacotes escolhidos estejam disponíveis para essa plataforma.
 
+<br/>
+<br/>
+
+
 ## 3. Configurar o usuário do NixOS
 
 O NixOS precisa criar a conta antes que o Home Manager possa gerenciá-la. Confirme que algum módulo importado pela configuração declara `users.users.${username}` e que o valor recebido pelo módulo vem do `flake.nix`.
@@ -229,6 +256,11 @@ Os grupos devem refletir os recursos realmente utilizados. `wheel` permite admin
 
 Se outro shell for utilizado, substitua o Fish e habilite o shell correspondente no NixOS. O shell de login precisa existir na configuração do sistema antes de ser atribuído ao usuário.
 
+
+<br/>
+<br/>
+
+
 ## 4. Configurar o perfil do Home Manager
 
 Como o Home Manager é standalone, o perfil deve declarar explicitamente o nome do usuário e seu diretório pessoal. Abra `home/username/home.nix` e confirme a presença das opções abaixo:
@@ -260,6 +292,10 @@ Em uma migração, substitua `26.05` pelo valor já usado no perfil anterior. Ca
 
 Revise os módulos importados pelo perfil. Remova temporariamente programas que dependam de credenciais, caminhos privados, monitores específicos, dispositivos que não existem ou arquivos que não fazem parte do repositório. A primeira ativação deve produzir um ambiente funcional; personalizações específicas podem ser reintroduzidas depois.
 
+<br/>
+<br/>
+
+
 ## 5. Preparar o hardware da máquina
 
 A forma de obter o `hardware-configuration.nix` depende de a instalação atual ser preservada ou recriada.
@@ -280,6 +316,11 @@ lsblk -f
 ```
 
 Verifique principalmente os pontos de montagem de `/`, `/boot`, `/home`, swap, partições criptografadas e subvolumes Btrfs. Caso o layout tenha sido alterado, gere um arquivo novo em vez de manter referências antigas.
+
+
+<br/>
+<br/>
+
 
 ## 6. Revisar a configuração específica do host
 
@@ -312,6 +353,10 @@ Revise as opções de boot antes de continuar. A configuração precisa correspo
 
 Não aplique configurações de GPU, armazenamento ou bootloader que pertenciam a outra máquina. Um módulo pode ser sintaticamente válido e ainda impedir a inicialização quando assume dispositivos inexistentes ou pontos de montagem incorretos.
 
+<br/>
+<br/>
+
+
 ## 7. Adicionar os arquivos ao Git e avaliar o Flake
 
 Adicione ao índice todos os arquivos criados ou renomeados:
@@ -340,6 +385,10 @@ nix flake check --show-trace
 ```
 
 Uma falha nesta etapa precisa ser corrigida antes da instalação. Erros comuns incluem imports apontando para diretórios antigos, arquivos novos fora do índice do Git, nomes diferentes entre o Flake e os diretórios, opções removidas e pacotes indisponíveis para a arquitetura escolhida.
+
+<br/>
+<br/>
+
 
 ## 8. Construir e ativar o NixOS
 
@@ -381,6 +430,10 @@ sudo nixos-rebuild switch \
 ```
 
 Reinicie a máquina e selecione a geração anterior no bootloader caso a nova geração não consiga iniciar corretamente. Não remova gerações antigas até concluir a validação do novo host.
+
+<br/>
+<br/>
+
 
 ## 9. Ativar o Home Manager pela primeira vez
 
@@ -426,6 +479,10 @@ systemctl --user --failed
 ```
 
 Se o ambiente gráfico, o terminal ou algum serviço da sessão não iniciar, corrija o módulo correspondente no Home Manager e execute novamente o `switch`. Não é necessário reconstruir o NixOS para alterações que pertencem exclusivamente ao perfil do usuário.
+
+<br/>
+<br/>
+
 
 ## 10. Confirmar a instalação
 
