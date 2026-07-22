@@ -52,13 +52,18 @@ Essa estrutura separa:
 - configurações pessoais em `home/<usuario>/`, onde estarão as suas configuração do `Home-manager`;
 - documentação em `docs/`.
 
+<br/>
 
 
 > Caso esta seja sua primeira instalação ou você pretenda migrar uma configuração existente para o modelo adotado neste repositório, consulte o guia de primeira instalação e migração. O documento explica como preparar um novo host, gerar ou reutilizar o hardware-configuration.nix, registrar o sistema no Flake, instalar o NixOS e ativar o Home Manager com segurança. [detalhes do documento](./docs/first-installation-and-migration.md) 
 
+<br/>
+<br/>
+<br/>
 
+## O dia a dia com o Home-manager
 
-## O dia a dia com essa configuração nix 
+<br/>
 
 No uso cotidiano, não é necessário reconstruir todo o sistema sempre que um novo pacote ou uma configuração pessoal for adicionada. As configurações do NixOS e do Home Manager são independentes, portanto cada uma deve ser atualizada somente quando houver alterações em sua respectiva responsabilidade.
 
@@ -93,6 +98,20 @@ home-manager switch \
 ```
 
 No uso cotidiano, os comandos apresentados anteriormente são suficientes para manter o ambiente atualizado e aplicar alterações sem reconstruções desnecessárias.
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+<br/>
+
+
+## O dia a dia com o configuração nix 
+
+<br/>
 
 A configuração do NixOS, definida principalmente em `configuration.nix` e nos módulos importados por ele, só precisa ser reconstruída quando houver mudanças de nível sistêmico, como alterações em serviços globais, usuários, drivers, bootloader, hardware, rede ou outros componentes administrados pelo sistema. Antes de aplicar qualquer alteração, é recomendável validar o Flake com `nix flake check --show-trace`. Essa verificação identifica problemas de avaliação, imports incorretos, opções inválidas e conflitos entre módulos antes que qualquer mudança seja aplicada ao sistema.
 
