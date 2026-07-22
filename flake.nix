@@ -26,6 +26,16 @@
       system = "x86_64-linux";
       hostname = "nixos";
       username = "ferreira-gn";
+
+      # pacotes do home-manager
+      pkgs = import nixpkgs {
+        inherit system;
+
+        config = {
+          allowUnfree = true;
+        };
+      };
+
     in
     {
       formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt;
@@ -39,23 +49,22 @@
 
         modules = [
           ./hosts/${hostname}/configuration.nix
-
-          home-manager.nixosModules.home-manager
-
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              backupFileExtension = "backup";
-
-              extraSpecialArgs = {
-                inherit inputs hostname username;
-              };
-
-              users.${username} = import ./home/${username}/home.nix;
-            };
-          }
         ];
       };
+
+
+
+      homeConfigurations."${username}@${hostname}" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+
+          extraSpecialArgs = {
+            inherit inputs hostname username;
+          };
+
+          modules = [
+            ./home/${username}/home.nix
+          ];
+      };
+
     };
 } 

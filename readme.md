@@ -35,3 +35,15 @@ A ser feito
 criar a documentação do repo 
 criar o start inicial para qualquer pessoa que use essas configs 
 ajustar o nvim e seus links simbolicos.
+
+
+
+
+build mais controlado 
+
+```
+sudo nixos-rebuild switch \
+  --flake .#nixos \
+  --option max-jobs 1 \
+  --option cores 2
+```

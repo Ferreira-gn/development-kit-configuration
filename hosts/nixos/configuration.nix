@@ -269,7 +269,7 @@
     # Dev tools
     vscode
     zed-editor
-    android-studio
+    # android-studio
     jetbrains.idea-oss
     insomnia
     kitty
