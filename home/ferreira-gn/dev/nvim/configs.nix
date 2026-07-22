@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  nvimConfig = "${config.home.homeDirectory}/dev/development-kit-configuration/dev/nvim/conf";
+  nvimConfig = "${config.home.homeDirectory}/dev/development-kit-configuration/home/ferreira-gn/dev/nvim/conf";
 in
 {
   programs.home-manager.enable = true;

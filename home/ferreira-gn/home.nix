@@ -1,8 +1,8 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, username, ... }:
 
 {
-  home.username = "ferreira-gn";
-  home.homeDirectory = "/home/ferreira-gn";
+  home.username = username;
+  home.homeDirectory = "/home/${username}";
   home.stateVersion = "26.05";
   programs.home-manager.enable = true;
   fonts.fontconfig.enable = true;
@@ -21,6 +21,7 @@
     size = 24;
     gtk.enable = true;
     x11.enable = true;
+    enable = true;
   };
 
   # modulo para facilitar o lsp do hypr-lua
