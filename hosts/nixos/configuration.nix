@@ -1,8 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, hostname, username, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/nixos/nixpkgs.nix
   ];
 
   ################################################################################
@@ -12,7 +13,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos";
+  networking.hostName = hostname;
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/Fortaleza";
@@ -155,15 +156,19 @@
   users.users.ferreira-gn = {
     isNormalUser = true;
     description = "ferreira-gn";
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     extraGroups = [
       "wheel"
       "networkmanager"
       "docker"
+      "video"
+      "audio"
+      "input"
     ];
   };
 
   programs.zsh.enable = true;
+  programs.fish.enable = true;
 
   environment.etc."ssh/ssh_config".text = ''
     Host github.com

@@ -27,3 +27,11 @@ Essas são **as minhas configuração** do meu setup de desenvolvimento criadas 
   nix run github:nix-community/home-manager -- switch --flake .#seu-usuário-nixos  
 
 ```
+
+
+
+A ser feito 
+
+criar a documentação do repo 
+criar o start inicial para qualquer pessoa que use essas configs 
+ajustar o nvim e seus links simbolicos.
