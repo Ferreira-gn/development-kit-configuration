@@ -29,6 +29,9 @@
     # Ferramentas de lock screen
     hyprlock
     hypridle
+
+    # Ferramenta wayland para simular escrita no teclado 
+    wtype
   ];
 
   xdg.configFile."hypr".source = ../hypr-lua;

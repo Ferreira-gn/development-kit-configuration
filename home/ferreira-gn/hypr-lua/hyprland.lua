@@ -9,6 +9,7 @@ require("config/input")
 require("binding/actions")
 require("binding/screen")
 require("binding/noctalia")
+require("binding/keyboard-gaming")
 
 -- animations and theme 
 require("theme/animation")
