@@ -3,6 +3,11 @@
 {
   programs.home-manager.enable = true;
 
+  programs.noctalia = {
+    enable = true;
+  };
+
+
   home.packages = with pkgs; [
     # Pacotes necessários para rodar o hyprland
     hyprland

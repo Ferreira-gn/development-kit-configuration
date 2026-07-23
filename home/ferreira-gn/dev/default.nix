@@ -2,10 +2,6 @@
 
 {
   programs.home-manager.enable = true;
-
-  programs.noctalia = {
-    enable = true;
-  };
   
   imports = [
     ./java/configs.nix
