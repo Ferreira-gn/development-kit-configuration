@@ -1,15 +1,21 @@
-{ config, pkgs, ... }:
+{ config, lib, repositoryPath, ... }:
 
 let
-  nvimConfig = "${config.home.homeDirectory}/dev/development-kit-configuration/home/ferreira-gn/dev/nvim/conf";
+  nvimConfig = "${repositoryPath}/home/${config.home.username}/dev/nvim/conf";
 in
 {
-  programs.home-manager.enable = true;
-
   programs.neovim = {
     enable = true;
     defaultEditor = true;
   };
 
-  xdg.configFile."nvim".source = ./conf;
+  # A configuração completa do Neovim será gerenciada
+  # diretamente pelo diretório presente no repositório.
+  xdg.configFile."nvim" = {
+    source = config.lib.file.mkOutOfStoreSymlink nvimConfig;
+    recursive = false;
+  };
+
+  # Evita que programs.neovim tente criar um init.lua
+  xdg.configFile."nvim/init.lua".enable = lib.mkForce false;
 }

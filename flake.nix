@@ -36,6 +36,12 @@
         };
       };
 
+      # caminho do diretório home do sistema 
+      homeDirectory = "/home/${username}";
+
+      # caminho do diretório
+      repositoryPath = "${homeDirectory}/dev/development-kit-configuration";
+
     in
     {
       formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt;
@@ -44,7 +50,7 @@
         inherit system;
 
         specialArgs = {
-          inherit inputs hostname username;
+          inherit inputs hostname username repositoryPath;
         };
 
         modules = [
@@ -58,7 +64,7 @@
           inherit pkgs;
 
           extraSpecialArgs = {
-            inherit inputs hostname username;
+            inherit inputs hostname username repositoryPath;
           };
 
           modules = [

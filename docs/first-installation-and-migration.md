@@ -107,6 +107,7 @@ Neste guia, os valores genéricos são:
 ```text
 hostname: host
 username: username
+repositoryPath: caminho do seu repo com as config
 ```
 
 O repositório utiliza uma versão estável do NixOS e a release correspondente do Home Manager. Mantenha os inputs alinhados durante a primeira instalação. Atualizações do `flake.lock` devem ser feitas somente depois que a configuração atual tiver sido instalada e validada.
@@ -170,6 +171,10 @@ let
     inherit system;
     config.allowUnfree = true;
   };
+
+  homeDirectory = "/home/${username}";
+  repositoryPath = "${homeDirectory}/caminho/do/repositorio/development-kit-configuration";
+
 in
 {
   nixosConfigurations.${hostname} =
@@ -177,7 +182,7 @@ in
       inherit system;
 
       specialArgs = {
-        inherit inputs hostname username;
+        inherit inputs hostname username repositoryPath;
       };
 
       modules = [
@@ -193,7 +198,7 @@ in
       inherit pkgs;
 
       extraSpecialArgs = {
-        inherit inputs hostname username;
+        inherit inputs hostname username repositoryPath;
       };
 
       modules = [
