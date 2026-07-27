@@ -15,6 +15,10 @@
     unrar
     wl-clipboard
 
+    # Core TUIS tools
+    lazygit
+    lazydocker
+
     # Core CLI tools
     git
     gh # github cli
