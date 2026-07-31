@@ -39,7 +39,7 @@
       # caminho do diretório home do sistema 
       homeDirectory = "/home/${username}";
 
-      # caminho do diretório
+      # caminho do dotfiles
       repositoryPath = "${homeDirectory}/dev/development-kit-configuration";
 
     in
