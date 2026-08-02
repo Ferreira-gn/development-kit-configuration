@@ -9,10 +9,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # hyprland shell
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs"; 
     };
+
+    # tui
+    tuicr = {
+      url = "github:agavra/tuicr";
+    };
+
   };
 
   outputs =

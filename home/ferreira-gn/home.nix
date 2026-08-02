@@ -31,6 +31,7 @@
   # Módulos
   imports = [
     inputs.noctalia.homeModules.default
+    ../../modules/home/development/github-workflow.nix
     ./hypr-lua/default.nix
     ./terminal/default.nix
     ./quickshell/default.nix
