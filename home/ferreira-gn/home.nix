@@ -30,8 +30,14 @@
 
   # Módulos
   imports = [
+    # modulo dos inputs
     inputs.noctalia.homeModules.default
+
+    # modulos globais 
     ../../modules/home/development/github-workflow.nix
+    ../../modules/home/development/android-workflow.nix
+
+    # modulos do usuário ferreira-gn
     ./hypr-lua/default.nix
     ./terminal/default.nix
     ./quickshell/default.nix
