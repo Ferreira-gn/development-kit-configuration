@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos/nixpkgs.nix
+    ../../modules/nixos/android/android.nix
   ];
 
   ################################################################################
@@ -269,7 +270,6 @@
     # Dev tools
     vscode
     zed-editor
-    # android-studio
     jetbrains.idea-oss
     insomnia
     kitty
