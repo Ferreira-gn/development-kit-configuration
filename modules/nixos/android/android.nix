@@ -32,8 +32,6 @@ in
     pkgs.android-tools
   ];
 
-  programs.adb.enable = true;
-
   environment.variables = {
     ANDROID_HOME =
       "${androidSdk}/libexec/android-sdk";
