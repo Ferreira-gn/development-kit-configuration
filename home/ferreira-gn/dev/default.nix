@@ -1,8 +1,12 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   programs.home-manager.enable = true;
   
+  home.packages = with pkgs; [
+    bun
+  ];
+
   imports = [
     ./java/configs.nix
     ./go/configs.nix
