@@ -16,7 +16,7 @@
     ########################
 
     [terminal.shell]
-    program = "fish"
+    program = "bash"
 
     ########################
     # Janela
