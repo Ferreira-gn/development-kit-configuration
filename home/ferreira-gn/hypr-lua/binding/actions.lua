@@ -1,15 +1,16 @@
 local terminal = "kitty"
-local secondaryTerminal = "alacrati"
+local secondaryTerminal = "alacritty"
 local ide = "zeditor"
 local browser = "brave"
 local launcherCmd = "sh -c ~/.config/rofi/launchers/type-6/launcher.sh"
+local translateLauncherCmd = "sh -c /home/ferreira-gn/.local/bin/rofi-translate"
 local walpaperCmd = "sh -c ~/.config/hypr/scripts/switch-wallpaper.sh"
 local screenShotCmd = [[sh -c 'hyprshot -m region --freeze --raw | satty -f - --output-filename "/home/ferreira-gn/Images/ScreenShots/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"']]
 local wlogout = [[sh -c '~/.config/hypr/scripts/run-wlogout.sh']]
 
 -- essential apps
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
-hl.bind("SUPER + T", hl.dsp.exec_cmd(secondaryTerminal))
+hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd(secondaryTerminal))
 hl.bind("SUPER + Z", hl.dsp.exec_cmd(ide))
 hl.bind("SUPER + W", hl.dsp.exec_cmd(browser))
 
@@ -18,6 +19,7 @@ hl.bind("SUPER + Q", hl.dsp.window.close())
 
 -- launcher
 hl.bind("SUPER + K", hl.dsp.exec_cmd(launcherCmd))
+hl.bind("SUPER + T", hl.dsp.exec_cmd(translateLauncherCmd))
 
 -- screenshoot
 hl.bind("PRINT", hl.dsp.exec_cmd(screenShotCmd))
