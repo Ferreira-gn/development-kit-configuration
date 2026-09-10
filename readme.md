@@ -149,3 +149,24 @@ sudo nixos-rebuild switch \
 
 Ao final, você também pode optar por ignorar as etapas de validação anteriores e utilizar diretamente o comando de rebuild completo. No entanto, essa abordagem exige mais cautela, pois falhas de avaliação, compilação, ativação ou incompatibilidades entre pacotes podem comprometer a nova geração e afetar o próximo boot do sistema. Por isso, utilize esse fluxo apenas quando estiver seguro das alterações realizadas e mantenha sempre uma geração estável disponível para recuperação. Recoemndo ao menos realizar um flake check antes de continuar.
 
+
+## Manutenção do ambiente
+
+O **Home Manager** mantém gerações anteriores das configurações do usuário para permitir rollback. Com o tempo, essas gerações podem acumular espaço no sistema. O comando `expire-generations` permite remover gerações antigas de acordo com um período definido, sem interferir diretamente nas configurações atuais.
+
+```fish
+home-manager expire-generations "-30 days"
+```
+
+O **garbage collector do Nix** remove do `/nix/store` os pacotes e dependências que não são mais referenciados por nenhuma geração ou configuração ativa. Ele pode ser executado normalmente após a remoção de gerações antigas. A opção `-d` também remove gerações antigas, sendo uma alternativa mais agressiva e que reduz as possibilidades de rollback.
+
+```fish
+sudo nix-collect-garbage
+```
+
+Para uma limpeza completa das gerações antigas:
+
+```fish
+sudo nix-collect-garbage -d
+```
+
