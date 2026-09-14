@@ -5,6 +5,9 @@
 
   home.packages = with pkgs; [
 
+    # charm tools
+    charm-freeze
+
     # tools to management system
     codex # codex cli
     wev
