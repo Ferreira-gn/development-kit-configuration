@@ -5,7 +5,14 @@
   
   home.packages = with pkgs; [
     bun
-  ];
+    yt-dlp 
+    ffmpeg
+    pstree
+    flutter
+    gradle
+    libGL
+    libGLU
+];
 
   imports = [
     ./java/configs.nix
