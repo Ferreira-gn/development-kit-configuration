@@ -15,5 +15,8 @@
 
     # Hot reload tool for golang
     air
+
+    # charm tools
+    charm-freeze
   ];
 }

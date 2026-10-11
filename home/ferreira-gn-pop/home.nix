@@ -17,5 +17,12 @@
   imports = [
     ../ferreira-gn/terminal/default.nix
     ../ferreira-gn/dev/default.nix
+
+    # Language module
+    ../../modules/home/languages/default.nix
+
+    # Terminal module
+    ../../modules/home/terminal/default.nix
+    
   ];
 }
