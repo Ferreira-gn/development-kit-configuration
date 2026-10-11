@@ -66,7 +66,7 @@
       };
 
 
-
+      # Configurações do home-manager para distro NixOs
       homeConfigurations."${username}@${hostname}" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
@@ -78,6 +78,22 @@
             ./home/${username}/home.nix
           ];
       };
+
+
+      # Configurações do home-manager para distros Não-NixOs      
+      homeConfigurations."${username}@pop" =
+        home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+      
+          extraSpecialArgs = {
+            inherit inputs username repositoryPath;
+            hostname = "pop";
+          };
+      
+          modules = [
+            ./home/ferreira-gn-pop/home.nix
+          ];
+        };
 
     };
 } 
