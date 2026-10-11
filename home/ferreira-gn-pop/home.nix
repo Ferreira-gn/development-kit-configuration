@@ -19,10 +19,10 @@
     ../ferreira-gn/dev/default.nix
 
     # Language module
-    ../../modules/home/languages/default.nix
+    ../../modules/home/development/languages/default.nix
 
     # Terminal module
-    ../../modules/home/terminal/default.nix
+    ../../modules/home/development/terminal/default.nix
     
   ];
 }
