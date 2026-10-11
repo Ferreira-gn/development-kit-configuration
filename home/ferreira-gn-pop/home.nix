@@ -6,6 +6,8 @@
   home.stateVersion = "26.05";
   programs.home-manager.enable = true;
   fonts.fontconfig.enable = true;
+  targets.genericLinux.enable = true;
+  targets.genericLinux.gpu.enable = true;
 
   imports = [
     ./userPrograms.nix
@@ -19,7 +21,7 @@
     # Workflow module
     ../../modules/home/development/workflows/android-workflow.nix
     ../../modules/home/development/workflows/github-workflow.nix
-    
+
     # Tools module
     ../../modules/home/tools/devTools/default.nix
     ../../modules/home/tools/mobileTools/default.nix
