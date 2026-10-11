@@ -11,8 +11,6 @@
 
     # Management package
     gradle
-    maven
-
     (maven.override { jdk_headless = pkgs.javaPackages.compiler.openjdk21; })
   ];
 
