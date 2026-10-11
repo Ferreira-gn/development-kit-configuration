@@ -34,8 +34,8 @@
     inputs.noctalia.homeModules.default
 
     # modulos globais 
-    ../../modules/home/development/github-workflow.nix
-    ../../modules/home/development/android-workflow.nix
+    #../../modules/home/development/github-workflow.nix
+    #../../modules/home/development/android-workflow.nix
 
     # modulos do usuário ferreira-gn
     ./hypr-lua/default.nix
