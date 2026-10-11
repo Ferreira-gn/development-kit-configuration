@@ -9,4 +9,13 @@
     python312
     poetry
   ];
+
+  imports = [
+    ./go/configs.nix
+    ./java/configs.nix
+    ./node/configs.nix
+    ./rust/configs.nix
+    ./lua/configs.nix
+    ./nix/configs.nix
+  ];
 }
