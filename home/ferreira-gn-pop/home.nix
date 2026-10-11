@@ -24,5 +24,7 @@
     ../../modules/home/tools/devTools/default.nix
     ../../modules/home/tools/mobileTools/default.nix
 
+    # Language module
+    ../../modules/home/development/nvim/default.nix
   ];
 }
