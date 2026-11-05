@@ -8,6 +8,7 @@
     gcc
     python312
     poetry
+    clojure
   ];
 
   imports = [

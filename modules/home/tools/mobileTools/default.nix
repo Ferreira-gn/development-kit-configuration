@@ -7,6 +7,5 @@
     scrcpy
     android-tools
     eas-cli
-    flutter
   ];
 }
